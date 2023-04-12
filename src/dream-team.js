@@ -14,7 +14,11 @@ const { NotImplementedError } = require("../extensions/index.js");
  *
  */
 function createDreamTeam(members) {
-  if (Boolean(members) === false || members === " ") {
+  if (
+    Boolean(members) === false ||
+    members === " " ||
+    !Array.isArray(members)
+  ) {
     return false;
   }
   let result = "";
@@ -26,7 +30,7 @@ function createDreamTeam(members) {
       result += item[0];
     }
   });
-  return result.split("").sort().join("").toUpperCase();
+  return result.toUpperCase().split("").sort().join("");
 }
 
 module.exports = {
