@@ -22,7 +22,6 @@ function transform(arr) {
     if (arr[i] === "--discard-next") {
       i++;
       if (arr[i++] === "'--double-prev'") i++;
-      if (i >= arr.length) return resArr;
     } else if (arr[i] === "--discard-prev") {
       resArr.pop();
     } else if (arr[i] === "--double-next") {
