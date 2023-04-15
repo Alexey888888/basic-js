@@ -19,7 +19,7 @@ function repeater(str, options) {
   //str = str.toString();
   let repeatTimes;
   let separator = "+";
-  let addition;
+  let addition = "";
   let additionRepeatTimes;
   let additionSeparator = "|";
   let res = "";
